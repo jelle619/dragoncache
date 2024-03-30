@@ -1,6 +1,8 @@
+image bg cave wall = "images/backgrounds/cave_wall.webp"
+
 label puzzle_inscriptions:
     scene bg cave wall
-    play music "audio/bgm/puzzle.flac"
+    play music "audio/bgm/puzzle.opus"
 
     $ inscription = _("even the flame of a dragon must begin as a spark")
     show text "{font=clawrite.ttf}[inscription]{/font}"

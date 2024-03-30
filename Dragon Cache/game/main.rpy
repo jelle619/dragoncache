@@ -1,17 +1,16 @@
 ﻿define dragon = Character("Bryce")
 
-image bg cave = "images/backgrounds/cave.png"
-image bg cave wall = "images/backgrounds/cave_wall.png"
-image bg treasure = "images/backgrounds/treasure.png"
+image bg cave = "images/backgrounds/cave.webp"
+image bg treasure = "images/backgrounds/treasure.webp"
 
-image dragon normal = "images/characters/dragon_normal.png"
-image dragon angry = "images/characters/dragon_angry.png"
-image dragon flirty = "images/characters/dragon_flirty.png"
-image dragon laugh = "images/characters/dragon_laugh.png"
-image dragon sad = "images/characters/dragon_sad.png"
-image dragon smirk = "images/characters/dragon_smirk.png"
-image dragon stern = "images/characters/dragon_stern.png"
-image dragon brow = "images/characters/dragon_brow.png"
+image dragon normal = "images/characters/dragon_normal.webp"
+image dragon angry = "images/characters/dragon_angry.webp"
+image dragon flirty = "images/characters/dragon_flirty.webp"
+image dragon laugh = "images/characters/dragon_laugh.webp"
+image dragon sad = "images/characters/dragon_sad.webp"
+image dragon smirk = "images/characters/dragon_smirk.webp"
+image dragon stern = "images/characters/dragon_stern.webp"
+image dragon brow = "images/characters/dragon_brow.webp"
 
 label main:
 
@@ -26,7 +25,7 @@ label main:
     window hide
     python:
         renpy.vibrate(0.25)
-    play audio "/audio/sfx/growl.wav"
+    play audio "/audio/sfx/growl.opus"
     show dragon angry with hpunch
     window show
 
@@ -97,11 +96,11 @@ label main:
         show dragon brow
         dragon "It looks like the treasure room is opening!"
         scene bg treasure with Fade(0.5,1.0,0.5,color="#fff")
-        show dragon laugh with dissolve
+        show dragon laugh
         dragon "Oh my goodness, it's been too long since I've been here. Take a look at all this!"
         label main_end_unlock:
             window hide
-            hide dragon with dissolve
+            hide dragon
             show text "Press to unlock the locker. Make sure to open the door before the lock closes again."
             pause
             show text "Locker has been unlocked. Please close the door when finished!"
@@ -152,7 +151,7 @@ label main:
             "And before long, you find yourself on the way back to the human realm."
             window hide
 
-            play music "audio/bgm/portal.mp3"
+            play music "audio/bgm/portal.opus" noloop
             python:
                 renpy.pause(delay=0.5, hard=True)
             scene bg portal 1 with Fade(0.5,1,0.5)
@@ -193,5 +192,8 @@ label main:
             scene
 
             pause 3
+
+            show text "Thank you for playing the game!"
+            pause
 
             return # this ends the game

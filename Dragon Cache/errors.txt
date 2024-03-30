@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/main.rpy", line 184: Line is indented, but the preceding pause statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    return 
-    ^
+File "game/intro.rpy", line 40: expected statement.
+    action Preference("display", "fullscreen")
+                     ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Tue Mar 26 23:06:23 2024
+Sat Mar 30 14:47:20 2024

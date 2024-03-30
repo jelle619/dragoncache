@@ -3,8 +3,39 @@
 # See https://www.renpy.org/doc/html/build.html#classifying-and-ignoring-files for matching
 #
 # +/- type path
-- image game/gui/**
-- image game/**
-+ image game/**
+# - image game/gui/**
+# - image game/images/backgrounds/portal_1.webp
+# - image game/images/backgrounds/portal_2.webp
+# - image game/images/backgrounds/portal_3.webp
+# - image game/images/backgrounds/portal_4.webp
+# - image game/images/backgrounds/portal_5.webp
+# - image game/images/backgrounds/portal_6.webp
+# - image game/images/backgrounds/portal_7.webp
+# - image game/images/backgrounds/portal_8.webp
+# - image game/images/backgrounds/portal_9.webp
+# - image game/images/backgrounds/portal_10.webp
+# - image game/images/backgrounds/portal_11.webp
+# - image game/images/backgrounds/portal_12.webp
+# - image game/images/backgrounds/portal_13.webp
+# - image game/images/backgrounds/portal_14.webp
+# - image game/images/backgrounds/portal_15.webp
+# - image game/images/backgrounds/portal_16.webp
+# - image game/images/backgrounds/portal_17.webp
+# - image game/images/backgrounds/portal_18.webp
+# - image game/images/backgrounds/portal_19.webp
+# - image game/images/backgrounds/portal_20.webp
+# - image game/images/backgrounds/portal_21.webp
+# - image game/images/backgrounds/portal_22.webp
+# - image game/images/backgrounds/portal_23.webp
+# - image game/images/backgrounds/portal_24.webp
+# - image game/images/backgrounds/portal_25.webp
+# - image game/images/backgrounds/portal_26.webp
+# - image game/images/backgrounds/portal_27.webp
+# - image game/images/backgrounds/portal_28.webp
+# - image game/images/backgrounds/portal_29.webp
+# - image game/images/backgrounds/portal_30.webp
+# - image game/images/characters/**
+# + image game/**
+- music game/audio/bgm/portal.opus
 + music game/audio/**
 + voice game/voice/**

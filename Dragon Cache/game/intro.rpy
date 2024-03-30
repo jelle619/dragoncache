@@ -1,39 +1,43 @@
 ﻿define unknown = Character("???")
 
-image bg forest = "images/backgrounds/forest.png"
+image bg forest = "images/backgrounds/forest.webp"
 
-image bg portal 1 = "images/backgrounds/portal_1.png"
-image bg portal 2 = "images/backgrounds/portal_2.png"
-image bg portal 3 = "images/backgrounds/portal_3.png"
-image bg portal 4 = "images/backgrounds/portal_4.png"
-image bg portal 5 = "images/backgrounds/portal_5.png"
-image bg portal 6 = "images/backgrounds/portal_6.png"
-image bg portal 7 = "images/backgrounds/portal_7.png"
-image bg portal 8 = "images/backgrounds/portal_8.png"
-image bg portal 9 = "images/backgrounds/portal_9.png"
-image bg portal 10 = "images/backgrounds/portal_10.png"
-image bg portal 11 = "images/backgrounds/portal_11.png"
-image bg portal 12 = "images/backgrounds/portal_12.png"
-image bg portal 13 = "images/backgrounds/portal_13.png"
-image bg portal 14 = "images/backgrounds/portal_14.png"
-image bg portal 15 = "images/backgrounds/portal_15.png"
-image bg portal 16 = "images/backgrounds/portal_16.png"
-image bg portal 17 = "images/backgrounds/portal_17.png"
-image bg portal 18 = "images/backgrounds/portal_18.png"
-image bg portal 19 = "images/backgrounds/portal_19.png"
-image bg portal 20 = "images/backgrounds/portal_20.png"
-image bg portal 21 = "images/backgrounds/portal_21.png"
-image bg portal 22 = "images/backgrounds/portal_22.png"
-image bg portal 23 = "images/backgrounds/portal_23.png"
-image bg portal 24 = "images/backgrounds/portal_24.png"
-image bg portal 25 = "images/backgrounds/portal_25.png"
-image bg portal 26 = "images/backgrounds/portal_26.png"
-image bg portal 27 = "images/backgrounds/portal_27.png"
-image bg portal 28 = "images/backgrounds/portal_28.png"
-image bg portal 29 = "images/backgrounds/portal_29.png"
-image bg portal 30 = "images/backgrounds/portal_30.png"
+image bg portal 1 = "images/backgrounds/portal_1.webp"
+image bg portal 2 = "images/backgrounds/portal_2.webp"
+image bg portal 3 = "images/backgrounds/portal_3.webp"
+image bg portal 4 = "images/backgrounds/portal_4.webp"
+image bg portal 5 = "images/backgrounds/portal_5.webp"
+image bg portal 6 = "images/backgrounds/portal_6.webp"
+image bg portal 7 = "images/backgrounds/portal_7.webp"
+image bg portal 8 = "images/backgrounds/portal_8.webp"
+image bg portal 9 = "images/backgrounds/portal_9.webp"
+image bg portal 10 = "images/backgrounds/portal_10.webp"
+image bg portal 11 = "images/backgrounds/portal_11.webp"
+image bg portal 12 = "images/backgrounds/portal_12.webp"
+image bg portal 13 = "images/backgrounds/portal_13.webp"
+image bg portal 14 = "images/backgrounds/portal_14.webp"
+image bg portal 15 = "images/backgrounds/portal_15.webp"
+image bg portal 16 = "images/backgrounds/portal_16.webp"
+image bg portal 17 = "images/backgrounds/portal_17.webp"
+image bg portal 18 = "images/backgrounds/portal_18.webp"
+image bg portal 19 = "images/backgrounds/portal_19.webp"
+image bg portal 20 = "images/backgrounds/portal_20.webp"
+image bg portal 21 = "images/backgrounds/portal_21.webp"
+image bg portal 22 = "images/backgrounds/portal_22.webp"
+image bg portal 23 = "images/backgrounds/portal_23.webp"
+image bg portal 24 = "images/backgrounds/portal_24.webp"
+image bg portal 25 = "images/backgrounds/portal_25.webp"
+image bg portal 26 = "images/backgrounds/portal_26.webp"
+image bg portal 27 = "images/backgrounds/portal_27.webp"
+image bg portal 28 = "images/backgrounds/portal_28.webp"
+image bg portal 29 = "images/backgrounds/portal_29.webp"
+image bg portal 30 = "images/backgrounds/portal_30.webp"
+
+define config.default_fullscreen = True 
 
 label start:
+
+    stop music fadeout 1.0
 
     scene
 
@@ -45,7 +49,7 @@ label start:
 
     scene bg forest
 
-    play music "audio/bgm/suspense.flac"
+    play music "audio/bgm/suspense.opus"
 
     unknown "Once upon a time, two brave adventurers were overjoyed to find a Geocache. However, something was amiss."
     unknown "The cache was placed on private property, but they knew the owner had little to do with Geocaching."
@@ -83,7 +87,7 @@ label start:
     "The door of the Geocache suddenly swings right open, and you feel a force pulling on you."
     "You try to get away, but the force is too over-powering, and you get sucked up into the Geocache."
 
-    play music "audio/bgm/portal.mp3"
+    play music "audio/bgm/portal.opus" noloop
     python:
         renpy.pause(delay=0.5, hard=True)
     scene bg portal 1 with Dissolve(0.50)

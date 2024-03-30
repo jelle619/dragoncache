@@ -12,17 +12,17 @@ FetchError: 404 Client Error: Not Found for url: http://192.168.1.1/open
 Full traceback:
   File "game/main.rpy", line 107, in script
     python:
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
+  File "/home/bluefire/Downloads/renpy-8.2.1-sdk/renpy/ast.py", line 823, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+  File "/home/bluefire/Downloads/renpy-8.2.1-sdk/renpy/python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
   File "game/main.rpy", line 108, in <module>
     renpy.fetch("http://192.168.1.1/open", method="post")
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\exports.py", line 4909, in fetch
+  File "/home/bluefire/Downloads/renpy-8.2.1-sdk/renpy/exports.py", line 4909, in fetch
     raise content # type: ignore
 FetchError: 404 Client Error: Not Found for url: http://192.168.1.1/open
 
-Windows-10-10.0.22631 AMD64
+Linux-6.7.9-200.fc39.x86_64-x86_64-with-glibc2.38 x86_64
 Ren'Py 8.2.1.24030407
 Dragon Cache 1.0
-Tue Mar 26 23:38:59 2024
+Sat Mar 30 16:12:36 2024

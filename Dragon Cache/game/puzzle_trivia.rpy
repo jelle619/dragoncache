@@ -1,8 +1,8 @@
-image bg puzzle trivia = "images/backgrounds/puzzle_trivia.png"
+image bg puzzle trivia = "images/backgrounds/puzzle_trivia.webp"
 
 label puzzle_trivia:
     scene bg puzzle trivia
-    play music "audio/bgm/puzzle.flac"
+    play music "audio/bgm/puzzle.opus"
 
     dragon "This puzzle is... oh no. This doesn't even make any sense..."
     dragon "It is a trivia quiz about dragons in human media, culture and mythology."
