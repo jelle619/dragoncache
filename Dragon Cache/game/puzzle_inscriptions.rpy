@@ -5,7 +5,7 @@ label puzzle_inscriptions:
     play music "audio/bgm/puzzle.opus"
 
     $ inscription = _("even the flame of a dragon must begin as a spark")
-    show text "{font=clawrite.ttf}[inscription]{/font}"
+    show text "{size=+30}{font=clawrite.ttf}[inscription]"
 
     dragon "These inscriptions are written in an acient dragon language. I wonder what they mean..."
     dragon "See, I actually grew up with the modern dragon language, so I have no idea what this says."

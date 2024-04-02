@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/intro.rpy", line 40: expected statement.
-    action Preference("display", "fullscreen")
-                     ^
+File "game/pre.rpy", line 8: expected 'name' not found.
+    hide screen
+               ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sat Mar 30 14:47:20 2024
+Sun Mar 31 19:55:38 2024

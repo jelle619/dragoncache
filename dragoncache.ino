@@ -17,6 +17,9 @@ bool openLockRequested = false;
 // Replace with your network credentials
 const char* ssid = "The Dragon Cache";
 const char* password = "summonthedr@gon";
+const int channel = 1;
+const int ssid_hidden = 0;
+const int max_connection = 1;
 IPAddress ip(192,168,1,1);
 IPAddress gateway(192,168,1,1);
 IPAddress subnet(255,255,255,0);
@@ -98,7 +101,7 @@ void openLock() {
 void initWiFi() {
   WiFi.mode(WIFI_AP);
   WiFi.softAPConfig(ip, gateway, subnet);
-  WiFi.softAP(ssid, password);
+  WiFi.softAP(ssid, password, channel, ssid_hidden, max_connection);
 
   Serial.print("Access point created: ");
   Serial.println(WiFi.softAPIP());

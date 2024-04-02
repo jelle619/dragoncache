@@ -33,11 +33,9 @@ image bg portal 28 = "images/backgrounds/portal_28.webp"
 image bg portal 29 = "images/backgrounds/portal_29.webp"
 image bg portal 30 = "images/backgrounds/portal_30.webp"
 
-define config.default_fullscreen = True 
-
 label start:
 
-    stop music fadeout 1.0
+    stop music
 
     scene
 

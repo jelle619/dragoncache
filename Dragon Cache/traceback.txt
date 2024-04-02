@@ -1,28 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-FetchError: 404 Client Error: Not Found for url: http://192.168.1.1/open
+  File "renpy/common/00start.rpy", line 241, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/pre.rpy", line 8, in script
+    $ renpy.hide_screen()
+  File "game/pre.rpy", line 8, in <module>
+    $ renpy.hide_screen()
+TypeError: hide_screen() missing 1 required positional argument: 'tag'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "/home/bluefire/Downloads/renpy-8.2.1-sdk/renpy/ast.py", line 823, in execute
+  File "renpy/common/00start.rpy", line 241, in script call
+    call _splashscreen from _call_splashscreen_1
+  File "game/pre.rpy", line 8, in script
+    $ renpy.hide_screen()
+  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/home/bluefire/Downloads/renpy-8.2.1-sdk/renpy/python.py", line 1178, in py_exec_bytecode
+  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-  File "/home/bluefire/Downloads/renpy-8.2.1-sdk/renpy/exports.py", line 4909, in fetch
-    raise content # type: ignore
-FetchError: 404 Client Error: Not Found for url: http://192.168.1.1/open
+  File "game/pre.rpy", line 8, in <module>
+    $ renpy.hide_screen()
+TypeError: hide_screen() missing 1 required positional argument: 'tag'
 
-Linux-6.7.9-200.fc39.x86_64-x86_64-with-glibc2.38 x86_64
+Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 Dragon Cache 1.0
-Sat Mar 30 16:12:36 2024
+Sun Mar 31 19:56:48 2024

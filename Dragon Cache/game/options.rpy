@@ -4,7 +4,6 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
-
 ## Basics ######################################################################
 
 ## A human-readable name of the game. This is used to set the default window
@@ -67,7 +66,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/bgm/main_menu.opus"
 
 
 ## Transitions #################################################################
