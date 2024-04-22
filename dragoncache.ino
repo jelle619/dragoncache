@@ -88,13 +88,20 @@ void submitLog() {
 
 void openLock() {
   Serial.println("Starting lock cycle...");
+  Serial.println("Entering power saving mode...");
+  // WiFi.setSleep(true);
+  setCpuFrequencyMhz(40);
+  delay(250);
   Serial.println("Opening lock...");
   digitalWrite(RELAY_PIN, HIGH); // unlock the door
   delay(5000);
   Serial.println("Closing lock...");
   digitalWrite(RELAY_PIN, LOW);  // lock the door
+  Serial.println("Exiting power saving mode...");
+  // WiFi.setSleep(false);
+  // setCpuFrequencyMhz(240);
   Serial.println("Cooling lock down...");
-  delay(5000);
+  delay(4750);
   Serial.println("Lock cycle complete, now open to new lock cycles.");
 }
 
@@ -110,6 +117,7 @@ void initWiFi() {
 void setup() {
   Serial.begin(115200);
   pinMode(RELAY_PIN, OUTPUT);
+  digitalWrite(RELAY_PIN, LOW);  // ensure lock is closed
 
   Serial.print("Status of ASyncTCP watchdog: ");
   if (CONFIG_ASYNC_TCP_USE_WDT == 1) {
@@ -118,9 +126,9 @@ void setup() {
     Serial.println("Disabled");
   }
 
-  playSound();
   initWiFi();
-  initSDCard();  
+  initSDCard();
+  playSound();
 
   // Route for lock endpoint
   server.on("/open", HTTP_POST, [](AsyncWebServerRequest *request){
