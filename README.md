@@ -1,5 +1,5 @@
 # The Dragon Cache
-More info soon!
+An interactive story-driven puzzle Geocache.
 
 ## Arduino Sketch
 This code runs on the ESP32 directly. It provides a web server and various other functions for features such as opening the lock and submitting Geocaching logs.
