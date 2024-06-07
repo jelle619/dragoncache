@@ -101,21 +101,11 @@ label main:
         label main_end_unlock:
             window hide
             hide dragon
-            show text "Press to unlock the locker. Make sure to open the door before the lock closes again."
-            pause
-            show text "Locker has been unlocked. Please close the door when finished!"
+
+            call screen lockerprompt
             python:
                 renpy.fetch("http://192.168.1.1/open", method="post")
-                renpy.pause(delay=5, hard=True)
-            show text "Waiting for the lock to cool down..."
-            python:
-                renpy.pause(delay=5, hard=True)
-            hide text
-            menu:
-                "Continue":
-                    window show
-                "Re-open locker":
-                    jump main_end_unlock
+            call screen lockerconfirmation
             
             show dragon normal
             dragon "Thank you so much for helping me out here. I truly appreciate it!"
@@ -193,7 +183,63 @@ label main:
 
             pause 3
 
-            show text "Thank you for playing the game!"
+            show text _("Thank you for playing the game!")
             pause
 
             return # this ends the game
+
+screen lockerprompt:
+
+    ## Ensure other screens do not get input while this screen is displayed.
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+
+    frame:
+
+        vbox:
+            xalign .5
+            yalign .5
+            spacing 45
+
+            label _("You are about to open the locker. Make sure to open the door within the next 10 seconds before the lock closes."):
+                style "confirm_prompt"
+                xalign 0.5
+
+            hbox:
+                xalign 0.5
+                spacing 150
+
+                textbutton _("Unlock") action [Hide(), Return()]
+
+screen lockerconfirmation:
+
+    ## Ensure other screens do not get input while this screen is displayed.
+    modal True
+
+    zorder 200
+
+    style_prefix "confirm"
+
+    add "gui/overlay/confirm.png"
+
+    frame:
+
+        vbox:
+            xalign .5
+            yalign .5
+            spacing 45
+
+            label _("Locker has been opened. Make sure to close the door when finished."):
+                style "confirm_prompt"
+                xalign 0.5
+
+            hbox:
+                xalign 0.5
+                spacing 150
+
+                textbutton _("Continue{#main_end_unlock}") action [Hide(), Return()] 

@@ -4,8 +4,8 @@ label puzzle_inscriptions:
     scene bg cave wall
     play music "audio/bgm/puzzle.opus"
 
-    $ inscription = _("even the flame of a dragon must begin as a spark")
-    show text "{size=+30}{font=clawrite.ttf}[inscription]"
+    $ inscription = __("even the flame of a dragon must begin as a spark")
+    show text "{size=+30}{font=clawrite.ttf}[inscription!t]"
 
     dragon "These inscriptions are written in an acient dragon language. I wonder what they mean..."
     dragon "See, I actually grew up with the modern dragon language, so I have no idea what this says."
@@ -24,7 +24,7 @@ label puzzle_inscriptions:
         "I know what the inscription means.":
             dragon "If you truly do, you really must be a genius. What do they say?"
             python:
-                guess = renpy.input("What do the inscriptions say?", length=64)
+                guess = renpy.input(_("What do the inscriptions say?"), length=64)
                 guess = guess.strip().lower().replace('!', '').replace('?', '').replace('.', '').replace('-', ' ')
             dragon "Alright, that looks promising! Let me give it a try."
             if guess == inscription: 
@@ -36,13 +36,13 @@ label puzzle_inscriptions:
         "I need a hint.":
             dragon "It might look impossible, but it might be easier than you'd think at first glance."
             $ hint = renpy.random.choice([
-                "Taking some notes might be of great help. Note down the symbols you have already deciphered.",
-                "Look at words consisting of one, two, or three letters. I don't think many such words exist.",
-                "Are there any symbols that appear often? In English, the most common letters are E, T, A, O, and N.",
-                "Think of context. Dragons probably wrote this. What would dragons write about?",
-                "Are there any words that commonly appear at the start of a sentence?",
-                "Come to think of it, I do know for a fact that \"{font=clawrite.ttf}dragon{/font}\" stands for dragon!",
-                "Funny how some symbols look like letters in the human tongue, though there are some false friends in there."
+                _("Taking some notes might be of great help. Note down the symbols you have already deciphered."),
+                _("Look at words consisting of one, two, or three letters. I don't think many such words exist."),
+                _("Are there any symbols that appear often? In English, the most common letters are E, T, A, O, and N."),
+                _("Think of context. Dragons probably wrote this. What would dragons write about?"),
+                _("Are there any words that commonly appear at the start of a sentence?"),
+                _("Come to think of it, I do know for a fact that \"{font=clawrite.ttf}dragon{/font}\" stands for dragon!"),
+                _("Funny how some symbols look like letters in the human tongue, though there are some false friends in there.")
                 ])
             dragon "[hint]"
             jump puzzle_inscriptions_text

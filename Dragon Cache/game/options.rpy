@@ -31,7 +31,7 @@ define config.version = "1.0"
 define gui.about = _p("""
 Created and maintained by Jelle Zwiers.
 
-Special thanks to Filip Maessen for developing a custom PCB.
+Special thanks to Filip Maessen for developing a custom PCB, and André Zwiers for building the locker.
 
 This project makes use of generative AI for some images and sounds.
 """)

@@ -1,17 +1,17 @@
-2024-04-16 11:53:58 UTC
+2024-05-05 20:21:14 UTC
 Windows-10-10.0.22631
 Ren'Py 8.2.1.24030407
 
-Early init took 0.10s
-Loading error handling took 0.05s
-Loading script took 0.21s
-Loading save slot metadata took 0.17s
+Early init took 0.08s
+Loading error handling took 0.03s
+Loading script took 0.12s
+Loading save slot metadata took 0.04s
 Loading persistent took 0.00s
 Set script version to: (8, 1, 1)
-Running init code took 0.08s
+Running init code took 0.04s
 Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.15s
+Reloading save slot metadata took 0.03s
 Index archives took 0.00s
 Dump and make backups took 0.05s
 Cleaning cache took 0.00s
@@ -20,86 +20,13 @@ Initial gc took 0.03s
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
+Creating interface object took 0.27s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.03s
+Load screen analysis took 0.02s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.05s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.00s
-Running _start took 0.00s
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Fullscreen mode.
-Vendor: "b'NVIDIA Corporation'"
-Renderer: b'Quadro P2000/PCIe/SSE2'
-Version: b'4.6.0 NVIDIA 516.69'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1080) drawable=(1920, 1080)
-Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\exports.py", line 4909, in fetch
-    raise content # type: ignore
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)
-
-While running game code:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)
-
-Full traceback:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\exports.py", line 4909, in fetch
-    raise content # type: ignore
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)
-
-While running game code:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)
-
-Full traceback:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-  File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\exports.py", line 4909, in fetch
-    raise content # type: ignore
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)
-
-While running game code:
-  File "game/main.rpy", line 107, in script
-    python:
-  File "game/main.rpy", line 108, in <module>
-    renpy.fetch("http://192.168.1.1/open", method="post")
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)

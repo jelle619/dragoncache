@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/pre.rpy", line 8: expected 'name' not found.
-    hide screen
-               ^
+File "game/main.rpy", line 234: Line is indented, but the preceding textbutton statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    action: 
+    ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sun Mar 31 19:55:38 2024
+Mon Apr 29 20:21:00 2024

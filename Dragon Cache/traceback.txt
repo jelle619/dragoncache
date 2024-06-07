@@ -1,28 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/main.rpy", line 107, in script
+  File "game/main.rpy", line 106, in script
     python:
-  File "game/main.rpy", line 108, in <module>
+  File "game/main.rpy", line 107, in <module>
     renpy.fetch("http://192.168.1.1/open", method="post")
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)
+FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Max retries exceeded with url: /open (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000000018bdb7c0>, 'Connection to 192.168.1.1 timed out. (connect timeout=5)'))
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/main.rpy", line 107, in script
+  File "game/main.rpy", line 106, in script
     python:
   File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\ast.py", line 823, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/main.rpy", line 108, in <module>
+  File "game/main.rpy", line 107, in <module>
     renpy.fetch("http://192.168.1.1/open", method="post")
   File "C:\Users\jelle\Documents\renpy-8.2.1-sdk\renpy\exports.py", line 4909, in fetch
     raise content # type: ignore
-FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Read timed out. (read timeout=5)
+FetchError: HTTPConnectionPool(host='192.168.1.1', port=80): Max retries exceeded with url: /open (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x0000000018bdb7c0>, 'Connection to 192.168.1.1 timed out. (connect timeout=5)'))
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 Dragon Cache 1.0
-Tue Apr 16 14:00:55 2024
+Sun May  5 15:03:43 2024
